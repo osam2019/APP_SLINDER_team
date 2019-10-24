@@ -7,7 +7,7 @@
     <color name="selected_day_text">#ffffff</color>
     <color name="colorWeekDayLineColor">#d8d8d8</color>
     <color name="colorWeekEndColor">#000000</color>
-    <color name="colorTest">#1abc9c</color>
+    <color name="colorTest">#000000</color>
     <color name="colorMonthTextColor">#252525</color>
     <color name="color_old_day_text_color">#bbbbbb</color>
 </resources>

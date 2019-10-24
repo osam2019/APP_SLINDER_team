@@ -26,7 +26,8 @@
             android:layout_marginLeft="15dp"
             android:background="@android:color/white"
             android:scaleType="fitXY"
-            android:src="@drawable/aricalendar_btn_back" />
+            android:onClick="showNotification"
+            android:src="@drawable/ring" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -100,7 +101,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
-            android:text="나의 일정을 공유할 그룹"
+            android:text="나의 일정을 보낼 그룹"
             android:textSize="20dp" />
 
         <ImageButton

@@ -1,4 +1,4 @@
-package com.example.slinder;
+package com.example.aircalendar;
 
 public class User {
 

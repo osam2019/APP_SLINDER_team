@@ -34,6 +34,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.aircalendar.core.AirCalendarIntent;
 import com.example.aircalendar.core.AirMonthAdapter;
@@ -53,7 +57,9 @@ import java.util.List;
 import java.util.Locale;
 
 
+
 public class AirCalendarDatePickerActivity extends AppCompatActivity implements DatePickerController {
+
 
     public final static String EXTRA_FLAG = "FLAG";
     public final static String EXTRA_IS_BOOIKNG = "IS_BOOING";
@@ -178,6 +184,13 @@ public class AirCalendarDatePickerActivity extends AppCompatActivity implements 
         init();
 
 
+
+    }
+
+    public void showNotification(View view){
+        Intent intent = new Intent();
+        intent.setClassName("com.examle.slinder", "com.examle.slinder.NotificationActivity");
+        startActivity(intent);
 
     }
 
@@ -434,4 +447,7 @@ public class AirCalendarDatePickerActivity extends AppCompatActivity implements 
             e.printStackTrace();
         }
     }
+
+
+
 }

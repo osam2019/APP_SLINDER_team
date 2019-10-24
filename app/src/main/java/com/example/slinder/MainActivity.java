@@ -6,11 +6,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.aircalendar.AirCalendarDatePickerActivity;
 import com.example.aircalendar.core.AirCalendarIntent;
@@ -19,10 +21,13 @@ import com.example.aircalendar.core.DatePickerController;
 
 import java.util.Calendar;
 
+
 public class MainActivity extends AppCompatActivity implements DatePickerController {
 
+
+
     public final static int REQUEST_CODE = 1;
-    //private BackPressCloseHandler backPressCloseHandler;
+    private BackPressCloseHandler backPressCloseHandler;
 
     Button select;
     String start, end;
@@ -31,9 +36,11 @@ public class MainActivity extends AppCompatActivity implements DatePickerControl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //backPressCloseHandler = new BackPressCloseHandler(this);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
+        backPressCloseHandler = new BackPressCloseHandler(this);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+
+
 
         select = (Button)findViewById(R.id.rl_done_btn);
 
@@ -76,6 +83,12 @@ public class MainActivity extends AppCompatActivity implements DatePickerControl
             }
         });*/
 
+    }
+
+    public void showNotificaion(View view){
+        Intent intent = new Intent(this,NotificationActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     /*@Override
@@ -153,4 +166,9 @@ public class MainActivity extends AppCompatActivity implements DatePickerControl
     public void onDateRangeSelected(AirMonthAdapter.SelectedDays<AirMonthAdapter.CalendarDay> selectedDays) {
 
     }
+
+
+
+
+
 }

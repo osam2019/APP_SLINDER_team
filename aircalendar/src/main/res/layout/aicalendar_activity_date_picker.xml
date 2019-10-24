@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:calendar="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
@@ -19,6 +20,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp">
 
+
+
                 <RelativeLayout
                     android:id="@+id/rl_iv_back_btn_bg"
                     android:layout_width="50dp"
@@ -27,15 +30,16 @@
 
                 <ImageButton
                     android:id="@+id/iv_back_btn"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="14dp"
+                    android:layout_height="17dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
                     android:background="@android:color/white"
+                    android:onClick="showNotification"
                     android:scaleType="fitXY"
-                    android:src="@drawable/aricalendar_btn_back" />
+                    android:src="@drawable/ring" />
 
                 <TextView
                     android:text="재설정"
@@ -50,6 +54,7 @@
                     android:textSize="17sp"
                     android:layout_alignParentEnd="true"
                     android:id="@+id/rl_reset_btn" />
+
 
 
             </RelativeLayout>

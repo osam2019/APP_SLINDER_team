@@ -107,6 +107,9 @@ public class ReservationActivity extends AppCompatActivity {
 
         addDate(start.trim(),end.trim(), result.trim());
 
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
 
     }
 
